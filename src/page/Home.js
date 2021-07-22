@@ -19,7 +19,15 @@ export default function Home() {
 
                 ))}
             </div>
-            <div className="image-container"></div>    
+            <div className="image-container">
+            {dataElements.map(({image}, index)=>(   
+                    <Image
+                        key={index}
+                        image={image}
+                        active={''}
+                        rotationalPosition={''}    
+                    />
+                ))}</div>    
         </div>     
         </>
     )
