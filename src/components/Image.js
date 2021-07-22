@@ -8,7 +8,9 @@ export default function Image({image, active, rotationPosition}) {
         <img 
           alt={''}
           className={cn({active})}
-          src={image}
+          src={require(`../assets/${image}`).default}
+          height={134}
+          width={124}
           style={{ transform: active ? `scale(1.1) rotate(${rotationPosition}deg)`: `rotate(${rotationPosition}deg)`}}
         />  
     </>
