@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Home.css';
 import { dataElements } from '../data';
 import Title from '../components/Title';
@@ -6,6 +6,9 @@ import Image from '../components/Image';
 
 
 export default function Home() {
+    const [rotationPosition, setRotation] = useState(new Array(dataElements.length).fill(0));
+    // Start index, default value is 0.
+    const [activeIndex, setActiveIndex] = useState(-1);
     return (
         <>
         <div className="home-container" id="home-container">
@@ -15,6 +18,8 @@ export default function Home() {
                         key={index}
                         title={title}
                         index={index}    
+                        setRotation={setRotation}
+                        setIndex={setActiveIndex}
                     />
 
                 ))}
@@ -24,8 +29,8 @@ export default function Home() {
                     <Image
                         key={index}
                         image={image}
-                        active={''}
-                        rotationalPosition={''}    
+                        active={activeIndex ===index}
+                        rotationPosition={rotationPosition[index]}    
                     />
                 ))}</div>    
         </div>     
