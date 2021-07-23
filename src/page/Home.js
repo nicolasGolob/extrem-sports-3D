@@ -9,6 +9,16 @@ export default function Home() {
     const [rotationPosition, setRotation] = useState(new Array(dataElements.length).fill(0));
     // Start index, default value is 0.
     const [activeIndex, setActiveIndex] = useState(-1);
+
+    const handleSetRotation = (itemIndex)=>{
+        const newImageRotation = Math.random() * 5 * (Math.round(Math.random) ? 1 : -1);
+        // recall round will round up, and randomly return either 0 or 1 
+        const temporaryState = [...rotationPosition];
+        temporaryState[itemIndex]=newImageRotation;
+        // we define a new rotation from this element
+        setRotation(temporaryState);
+        setActiveIndex(itemIndex);
+    }
     return (
         <>
         <div className="home-container" id="home-container">
@@ -18,7 +28,7 @@ export default function Home() {
                         key={index}
                         title={title}
                         index={index}    
-                        setRotation={setRotation}
+                        setRotation={handleSetRotation}
                         setIndex={setActiveIndex}
                     />
 
