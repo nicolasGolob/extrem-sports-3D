@@ -11,7 +11,7 @@ export default function Home() {
     const [activeIndex, setActiveIndex] = useState(-1);
 
     const handleSetRotation = (itemIndex)=>{
-        const newImageRotation = Math.random() * 5 * (Math.round(Math.random) ? 1 : -1);
+        const newImageRotation = Math.random() * 5 * (Math.round(Math.random()) ? 1 : -1);
         // recall round will round up, and randomly return either 0 or 1 
         const temporaryState = [...rotationPosition];
         temporaryState[itemIndex]=newImageRotation;
