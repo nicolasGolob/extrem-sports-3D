@@ -39,7 +39,7 @@ export default function Home() {
                     <Image
                         key={index}
                         image={image}
-                        active={activeIndex ===index}
+                        active={activeIndex === index}
                         rotationPosition={rotationPosition[index]}    
                     />
                 ))}</div>    
