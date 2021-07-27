@@ -1,67 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-
 .home-container{
     position: relative;
     height: 80vh;
     width: 100%;
-    z-index: 99;
+    padding: 5rem 5rem;
+    z-index: 97;
+    background-image: linear-gradient(to bottom, #d7d7d7, #e1e1e1, #ebebeb, #f5f5f5, #ffffff);
 }
-
 .title-container{
-    position: absolute;
-    padding:0;
     display: block;
     background-color: transparent;
-    top:9%;
-    left: 6%;
-    right: 0%;
-    bottom: 0%;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
 }
-
 .title-item{
     background-color: transparent;
 }
-
 h1{
     display:block;
-    font-family: 'Shadows Into Light', cursive;
     font-size: 4rem;
     color: rgb(63, 63, 63);
     transition: color 0.1s ease-in-out;
-    background-color: transparent; 
+    background-color: transparent;
+    z-index: 99;
 }
-
 h1:hover{
     color:#5c5c5c;
 }
-
 .title-container:hover{
     cursor: pointer;
 }
-
 .image-container{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    margin-left: 0;
-    width: 100%;
-    height: 100vh;
+    margin-left: -6vw;
     z-index: -1;
-    top:0;
 }
-
 img {
     position: absolute;
+    height: 65vh;
     width: auto;
-    height: 75vh;
     transition: transform 0.1s ease-in-out;
     filter: grayscale(.9);
-    z-index: 98;
+    z-index: 91;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04), 0 16px 32px rgba(0, 0, 0, 0.04), 0 32px 64px rgba(0, 0, 0, 0.04);
 }
-
 .image-container img.active {
-    z-index: 99;
+    z-index: 95;
 }
+
+/* MediaQueries */
+@media(max-width:768px){
+  .home-container{ 
+    padding: 2rem 2rem;
+  }
+  h1{
+    font-size: 2.3rem; 
+  }
+  img {
+    height: 60vh;
+  }
+}
+
+@media(max-width:425px){
+  h1{
+    font-size: 2rem; 
+  }
+  img {
+    height: 53vh;
+  }
+}
+
+@media(max-width:375px){ 
+  .home-container{ 
+    padding: 2rem 2rem;
+  }
+  h1{
+    font-size: 1.9rem; 
+  }
+  img {
+    height: 40vh;
+  }
+}
+
+@media(max-width:320px){
+  .home-container{ 
+    padding: 2rem 2rem;
+  }
+  h1{
+    font-size: 1.9rem; 
+  }
+  img {
+    height: 40vh;
+  }
+}
+  
+
+  
 
