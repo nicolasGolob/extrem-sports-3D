@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 .home-container{
     position: relative;
     height: 80vh;
@@ -5,14 +7,13 @@
     z-index: 99;
 }
 
-
 .title-container{
     position: absolute;
-    padding:0 6vw;
+    padding:0;
     display: block;
     background-color: transparent;
-    top:30%;
-    left: 8%;
+    top:9%;
+    left: 6%;
     right: 0%;
     bottom: 0%;
 }
@@ -23,20 +24,20 @@
 
 h1{
     display:block;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 4rem;
-    color:#3d3d3d;
+    color: rgb(63, 63, 63);
     transition: color 0.1s ease-in-out;
     background-color: transparent; 
 }
 
 h1:hover{
-    color:#d4d4d4;
+    color:#5c5c5c;
 }
 
 .title-container:hover{
     cursor: pointer;
 }
-
 
 .image-container{
     display: flex;
